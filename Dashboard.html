@@ -16,10 +16,9 @@
 <body>
  
   <header class="navbar">
-    <button class="btnlogout">Dark Mode</button>
+    <button id="btnDark" class="btnlogout">Dark Mode</button>
     <button class="btnlogout" onclick="logout()">Logout</button>
         
-
   </header>
 
 
@@ -70,7 +69,8 @@
 
       <div class="amount">
         <label for="amount">Amount</label>
-        <input type="number" min="0" placeholder="0.00 $" id="amount"  />
+        <input type="number" min="0" placeholder="0.00 $" id="amount" />
+       
       </div>
 
       <div class="notes">
@@ -78,12 +78,15 @@
         <input type="text" id="notes" placeholder="Optional note" />
       </div>
 
+       
+
       <div class="btntransaction">
         <button type="submit" id="btnadd" onclick="calc()">Add</button>
       </div>
+      <div id="massamount" style="padding:10px;"></div>
+
     </form>
 
-    
     <div class="search">
       <h3>Filter & Search</h3>
 
@@ -114,10 +117,12 @@
         <button type="submit" id="search">Search</button>
       </div>
     </div>
-</div>
-<div class="chart">
+    <div class="chart">
 <canvas id="myChart" ></canvas>
 </div>
+</div>
+<table id="txTable"></table>
+
   <script src="main.js"></script>
 </body>
 </html>
